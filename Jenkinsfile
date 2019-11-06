@@ -12,6 +12,11 @@ node {
       '''
    }
    stage('deploy') {
+     println  env.AZURE_CRED_ID
+      println env.RES_GROUP appName
+      println env.WEB_APP
+      println "**/todo.zip"
+      
       azureWebAppPublish azureCredentialsId: env.AZURE_CRED_ID,
       resourceGroup: env.RES_GROUP, appName: env.WEB_APP, filePath: "**/todo.zip"
    }
