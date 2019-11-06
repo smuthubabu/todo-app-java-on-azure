@@ -13,7 +13,7 @@ node {
    }
    stage('deploy') {
      println  env.AZURE_CRED_ID
-      println env.RES_GROUP appName
+      println env.RES_GROUP
       println env.WEB_APP
       println "**/todo.zip"
       
